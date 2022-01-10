@@ -1,0 +1,23 @@
+{
+  "name": "blogr-frontend-mentor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johangly/Blogr-Frontend-mentor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johangly/Blogr-Frontend-mentor/issues"
+  },
+  "homepage": "https://github.com/johangly/Blogr-Frontend-mentor#readme",
+  "devDependencies": {
+    "sass": "^1.47.0"
+  }
+}
