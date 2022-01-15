@@ -41,11 +41,12 @@ html {
   color: #fbfbfb;
   font-weight: 600;
   cursor: pointer;
+  transition: 200ms ease all;
   padding: 0.75rem clamp(1rem, 12.5vw, 1.125rem);
   border-radius: 3.125rem;
 }
 
-.footer ul .list__title::first-letter, .footer ul li::first-letter, .main .hero__h1::first-letter, .main .hero__p::first-letter, .main .designed__title::first-letter, .main .designed__content .designed__text .designed__h3::first-letter, .main .designed__content .designed__text .designed__p::first-letter, .main .state .state__text .state__title::first-letter {
+.footer ul .list__title::first-letter, .footer ul li::first-letter, .main .hero__h1::first-letter, .main .hero__p::first-letter, .main .designed__title::first-letter, .main .designed__content .designed__text .designed__h3::first-letter, .main .designed__content .designed__text .designed__p::first-letter, .main .state .state__text .state__title::first-letter, .main .free .free__content .free__h3::first-letter {
   text-transform: capitalize;
 }
 
@@ -266,7 +267,7 @@ body .main * {
 }
 
 .main .hero {
-  min-height: 42.5rem;
+  min-height: 39.375rem;
   position: relative;
   overflow: hidden;
   z-index: 5;
@@ -331,12 +332,13 @@ body .main * {
   align-items: center;
 }
 .main .designed__title {
-  font-size: clamp(1.75rem, 3.5vw, 2rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.375rem);
   font-weight: 600;
   text-align: center;
   color: #1f3f5b;
   position: relative;
-  top: 109px;
+  margin-top: 10px;
+  top: 60px;
 }
 .main .designed__content {
   display: flex;
@@ -346,7 +348,7 @@ body .main * {
   width: 100%;
 }
 .main .designed__content .designed__text {
-  padding: clamp(0.625rem, 8.5vw, 5rem);
+  padding: clamp(0.625rem, 9.5vw, 8rem);
 }
 .main .designed__content .designed__text .designed__h3 {
   margin-bottom: 1.25rem;
@@ -355,14 +357,13 @@ body .main * {
   color: #1f3f5b;
 }
 .main .designed__content .designed__text .designed__p {
-  font-size: 1rem;
-  line-height: 25px;
   max-width: 40.625rem;
   color: #4b5862;
-  letter-spacing: 0.5px;
+  font-size: 1rem;
+  line-height: 30px;
 }
 .main .designed__content .designed__text .designed__p:nth-child(2) {
-  margin-bottom: 3.125rem;
+  margin-bottom: 4.6875rem;
 }
 .main .designed__content .designed-desktop-img {
   max-width: 61%;
@@ -413,20 +414,19 @@ body .main * {
   color: #fbfbfb;
 }
 .main .state .state__text .state__title {
-  font-size: clamp(1.75rem, 3.5vw, 2rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.375rem);
   margin-bottom: 1.25rem;
   font-weight: 600;
 }
 .main .state .state__text .state__p {
   font-size: 1rem;
-  line-height: 25px;
-  max-width: 40.625rem;
-  letter-spacing: 0.5px;
+  line-height: 30px;
+  max-width: 90%;
 }
 .main .free {
   display: flex;
   justify-content: space-around;
-  padding: 4.6875rem 1.5625rem;
+  padding: 6.875rem 1.5625rem;
   align-items: center;
 }
 .main .free .free__imgMobile {
@@ -447,13 +447,13 @@ body .main * {
 }
 .main .free .free__content .free__p {
   font-size: 1rem;
-  line-height: 25px;
-  max-width: 40.625rem;
+  line-height: 30px;
+  max-width: 75%;
   color: #4b5862;
   letter-spacing: 0.5px;
 }
 .main .free .free__content .free__p:nth-child(2) {
-  margin-bottom: 3.125rem;
+  margin-bottom: 4.6875rem;
 }
 
 @media only screen and (max-width: 1203px) {
@@ -516,7 +516,7 @@ body .main * {
   }
   .main .free {
     display: flex;
-    padding: 1.5625rem 1.5625rem 3.75rem;
+    padding: 3.125rem 1.5625rem 6.25rem;
     flex-direction: column;
     align-items: center;
   }

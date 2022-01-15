@@ -10,6 +10,7 @@
     color: var.$white;
     font-weight: 600;
     cursor: pointer;
+    transition: 200ms ease all;
     padding: func.convert(12) func.resizer(16, 12.5vw, 18);
     border-radius: func.convert(50);
 }

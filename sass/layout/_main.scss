@@ -7,7 +7,7 @@ body .main * {
 
 .main {
     .hero {
-        min-height: func.convert(680);
+        min-height: func.convert(630);
         position: relative;
         overflow: hidden;
         z-index: 5;
@@ -76,13 +76,14 @@ body .main * {
         z-index: 10;
         align-items: center;
         &__title {
-            font-size: func.resizer(28, 3.5vw, 32);
+            font-size: func.resizer(28, 3.5vw, 38);
             @extend %first-letter;
             font-weight: 600;
             text-align: center;
             color: var.$vd-blue;
             position: relative;
-            top: 109px;
+            margin-top: 10px;
+            top: 60px;
         }
         &__content {
             display: flex;
@@ -91,7 +92,7 @@ body .main * {
             justify-content: space-between;
             width: 100%;
             .designed__text {
-                padding: clamp(0.625rem, 8.5vw, 5rem);
+                padding: clamp(0.625rem, 9.5vw, 8rem);
                 .designed__h3 {
                     margin-bottom: func.convert(20);
                     font-size: 1.7rem;
@@ -100,15 +101,14 @@ body .main * {
                     @extend %first-letter;
                 }
                 .designed__p {
-                    font-size: 1rem;
-                    line-height: 25px;
                     @extend %first-letter;
                     max-width: func.convert(650);
                     color: var.$vdg-blue;
-                    letter-spacing: .5px;
+                    font-size: 1rem;
+                    line-height: 30px;
                 }
                 .designed__p:nth-child(2) {
-                    margin-bottom: func.convert(50);
+                    margin-bottom: func.convert(75);
                 }
             }
             .designed-desktop-img {
@@ -161,23 +161,22 @@ body .main * {
                 color: var.$white;
             }
             .state__title {
-                font-size: clamp(1.75rem, 3.5vw, 2rem);
+                font-size: func.resizer(28, 3.5vw, 38);
                 margin-bottom: 1.25rem;
                 font-weight: 600;
                 @extend %first-letter;
             }
             .state__p {
                 font-size: 1rem;
-                line-height: 25px;
-                max-width: 40.625rem;
-                letter-spacing: 0.5px;
+                line-height: 30px;
+                max-width: 90%;
             }
         }
     }
     .free {
         display: flex;
         justify-content: space-around;
-        padding: func.convert(75) func.convert(25);
+        padding: func.convert(110) func.convert(25);
         align-items: center;
         .free__imgMobile {
             display: none;
@@ -193,16 +192,17 @@ body .main * {
                 font-size: 1.7rem;
                 font-weight: 600;
                 color: #1f3f5b;
+                @extend %first-letter;
             }
             .free__p {
                 font-size: 1rem;
-                line-height: 25px;
-                max-width: 40.625rem;
+                line-height: 30px;
+                max-width: 75%;
                 color: #4b5862;
                 letter-spacing: 0.5px;
             }
             .free__p:nth-child(2) {
-                margin-bottom: func.convert(50);
+                margin-bottom: func.convert(75);
             }
         }
     }
@@ -269,7 +269,7 @@ body .main * {
         }
         .free {
             display: flex;
-            padding: func.convert(25) func.convert(25) func.convert(60);
+            padding: func.convert(50) func.convert(25) func.convert(100);
             flex-direction: column;
             align-items: center;
             .free__imgMobile {
