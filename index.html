@@ -4,24 +4,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title>Frontend Mentor | [Blogr]</title>
     <!-- css styles link -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- css normalize link -->
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- font awesome style cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
 </head>
 
 <body>
-    <header>
-        <a href="#">
-            <img src="img/logo.svg" alt="">
+    <header class="header">
+        <a class="logo" href="#">
+            <img src="img/logo.svg" alt="Blogr" aria-label="Blogr link">
         </a>
-        <h1 class="text">nav</h1>
+        <button class="hamburguer" aria-label="menu button">
+            <img id="hamburguerImg" src="img/icon-hamburger.svg" alt="Menu button">
+        </button>
+        <div class="navigation">
+            <nav class="nav" aria-label="primary">
+                <div class="dropdown">
+                    <button class="dropbtn">product <img aria-hidden="true" class="drop-icon" src="img/icon-arrow-light.svg" alt="dropdown-icon"></button>
+                    <div class="dropdown-content">
+                        <a class="drop__link" href="#">contact</a>
+                        <a class="drop__link" href="#">newsletter</a>
+                        <a class="drop__link" href="#">linkedin</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">company <img aria-hidden="true" class="drop-icon" src="img/icon-arrow-light.svg" alt="dropdown-icon"></button>
+                    <div class="dropdown-content">
+                        <a class="drop__link" href="#">contact</a>
+                        <a class="drop__link" href="#">newsletter</a>
+                        <a class="drop__link" href="#">linkedin</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">connect <img aria-hidden="true" class="drop-icon" src="img/icon-arrow-light.svg" alt="dropdown-icon"></button>
+                    <div class="dropdown-content">
+                        <a class="drop__link" href="#">contact</a>
+                        <a class="drop__link" href="#">newsletter</a>
+                        <a class="drop__link" href="#">linkedin</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="login">
+                <button class="login__btn btn">login</button>
+                <button class="signup__btn btn">sign up</button>
+            </div>
+        </div>
+
     </header>
-    <main></main>
-    <footer></footer>
+    <main class="main">
+        <section class="hero">
+            <h1 class="hero__h1">a modern publishing platform</h1>
+            <p class="hero__p">grow your audience and build your online brand</p>
+            <div class="hero__buttons">
+                <button class="hero__button start">start for free</button>
+                <button class="hero__button learn">learn more</button>
+            </div>
+            <img class="hero__backgroundImg" aria-hidden="true" src="img/bg-pattern-intro-desktop.svg" alt="hero img">
+        </section>
+        <section class="designed">
+            <h2 class="designed__title">designed for the future</h2>
+            <div class="designed__content">
+                <div class="designed__text">
+                    <h3 class="designed__h3">introducing an extensible editor</h3>
+                    <p class="designed__p">blogr feature an exceendingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility
+                        with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+
+                    <h3 class="designed__h3">robust content management</h3>
+                    <p class="designed__p">Flexible content management enables users to easily move through post. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control.</p>
+                </div>
+                <img class="designed-desktop-img" aria-hidden="true" src="img/illustration-editor-desktop.svg" alt="design illustration">
+                <img class="designed-mobile-img" aria-hidden="true" src="img/illustration-editor-mobile.svg" alt="design illustration">
+            </div>
+        </section>
+        <section class="state">
+            <div class="circle__container">
+                <img class="state__circle" aria-hidden="true" src="img/bg-pattern-circles.svg" alt="pattert circles illustration">
+            </div>
+            <img class="state__phone" aria-hidden="true" src="img/illustration-phones.svg" alt="phones illustration">
+            <div class="state__text">
+                <h2 class="state__title">state of the art infrastructure</h2>
+                <p class="state__p">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+            </div>
+        </section>
+        <section class="free">
+            <img class="free__imgDesktop" src="img/illustration-laptop-desktop.svg" aria-hidden="true" alt="laptop desktop illustration">
+            <img class="free__imgMobile" src="img/illustration-laptop-mobile.svg" aria-hidden="true" alt="laptop mobile illustration">
+            <div class="free__content">
+                <h3 class="free__h3">free, open, simple</h3>
+                <p class="free__p">Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly
+                    with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+                <h3 class="free__h3">powerful tooling</h3>
+                <p class="free__p">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <a href="#">
+                <img src="img/logo.svg" alt="Blogr">
+            </a>
+        </div>
+        <ul class="footer__product">
+            <li class="list__title">product</li>
+            <li class="footer__link">
+                <a href="#">overview</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">pricing</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">marketplace</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">features</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">integrations</a>
+            </li>
+        </ul>
+        <ul class="footer__company">
+            <li class="list__title">company</li>
+
+            <li class="footer__link">
+                <a href="#">about</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">team</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">blog</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">careers</a>
+            </li>
+
+        </ul>
+        <ul class="footer__connect">
+            <li class="list__title">connect</li>
+
+            <li class="footer__link">
+                <a href="#">contact</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">newsletter</a>
+            </li>
+            <li class="footer__link">
+                <a href="#">linkedin</a>
+            </li>
+        </ul>
+        <!-- <div class="footer__product">
+            h3
+            <ul class="footer__list">
+                <li class="footer__link">overview</li>
+                <li class="footer__link">pricing</li>
+                <li class="footer__link">marketplace</li>
+                <li class="footer__link">features</li>
+                <li class="footer__link">integrations</li>
+            </ul>
+        </div>
+        <div class="footer__company">
+            <ul class="footer__list">
+                <li class="footer__link">about</li>
+                <li class="footer__link">team</li>
+                <li class="footer__link">blog</li>
+                <li class="footer__link">careers</li>
+            </ul>
+        </div>
+        <div class="footer__connect">
+            <ul class="footer__list">
+                <li class="footer__link">contact</li>
+                <li class="footer__link">newsletter</li>
+                <li class="footer__link">linkedin</li>
+            </ul>
+        </div> -->
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

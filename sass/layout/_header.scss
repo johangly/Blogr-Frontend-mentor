@@ -1,0 +1,225 @@
+@use "../base/functions" as func;
+@use "../base/extensions";
+@use "../base/variables" as var;
+body .header * {
+    font-family: var.$ubuntu;
+}
+
+.display {
+    display: flex !important;
+}
+
+body {
+    .header {
+        margin: 0 auto 0;
+        width: 100%;
+        z-index: 10;
+        max-width: 1726px;
+        display: flex;
+        background-color: transparent;
+        padding: func.convert(50) 10% func.convert(10);
+        align-items: center;
+        position: absolute;
+        top: 0;
+        .logo {
+            @extend %align-center;
+            cursor: pointer;
+        }
+        .navigation {
+            display: flex;
+            width: 100%;
+            .nav {
+                margin-left: func.convert(35);
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                    .dropbtn {
+                        background-color: transparent;
+                        color: var.$white;
+                        cursor: pointer;
+                        filter: opacity(0.7);
+                        font-weight: 600;
+                        padding: func.convert(12);
+                        font-size: 1rem;
+                        text-transform: capitalize;
+                        @extend %align-center;
+                        border: none;
+                        &:focus-visible {
+                            outline: 2px solid #1f3f5b;
+                        }
+                        .drop-icon {
+                            width: func.convert(12);
+                            transition: 150ms ease all;
+                            margin-bottom: func.convert(0);
+                            margin-left: func.convert(5);
+                        }
+                    }
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: var.$white;
+                        border-radius: 5px;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                        .drop__link {
+                            color: var.$vdb-blue;
+                            padding: func.convert(12) func.convert(16);
+                            display: block;
+                            font-size: func.convert(14);
+                            text-transform: capitalize;
+                            &:hover {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    &:hover .dropdown-content {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    &:hover .dropbtn .drop-icon {
+                        transform: rotate(180deg);
+                    }
+                    &:hover .dropbtn {
+                        text-decoration: underline;
+                        filter: opacity(1);
+                    }
+                }
+            }
+            .login {
+                margin-left: auto;
+                .btn {
+                    @extend %button;
+                    &:focus-visible {
+                        outline: 2px solid #1f3f5b;
+                    }
+                }
+                .login__btn {
+                    background-color: transparent;
+                    text-transform: capitalize;
+                }
+                .signup__btn {
+                    background-color: var.$white;
+                    text-transform: capitalize;
+                    padding: func.convert(12) func.convert(37);
+                    color: var.$l-red;
+                    &:hover {
+                        background-color: var.$vl-red;
+                        color: var.$white;
+                    }
+                }
+            }
+        }
+        .hamburguer {
+            background-color: transparent;
+            display: none;
+            img {
+                width: 50px;
+                height: 45px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    body {
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            padding: func.convert(50) 5% func.convert(10);
+            .navigation {
+                width: 90vw;
+                border-radius: func.convert(10);
+                // margin-top: func.convert(120);
+                background-color: #fff;
+                margin-top: func.convert(120);
+                min-height: 72vh;
+                position: fixed;
+                top: 0;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                flex-direction: column;
+                display: none;
+                align-items: center;
+                justify-content: space-between;
+                .nav {
+                    margin: 0;
+                    padding: func.convert(20);
+                    top: 0;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid var.$g-blue;
+                    .dropdown {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+                        .dropbtn {
+                            margin: 0 auto;
+                            color: var.$vd-blue;
+                            padding: func.convert(12) func.convert(70);
+                            font-size: 1.2rem;
+                            filter: opacity(1);
+                            .drop-icon {
+                                filter: brightness(0) saturate(100%) invert(57%) sepia(22%) saturate(1088%) hue-rotate(306deg) brightness(99%) contrast(103%);
+                            }
+                        }
+                        .dropdown-content {
+                            position: inherit;
+                            background-color: #f1f1f1;
+                            width: 80vw;
+                            align-items: center;
+                            justify-content: center;
+                            box-shadow: inherit;
+                            margin: func.convert(5) 0;
+                            padding: func.convert(16) func.convert(30);
+                            .drop__link {
+                                padding: func.convert(15) func.convert(30);
+                                font-size: 1.1rem;
+                                color: var.$vd-blue;
+                                font-size: func.convert(15);
+                                &:hover {
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+                .login {
+                    margin: 0;
+                    display: flex;
+                    margin-bottom: func.convert(40);
+                    flex-direction: column;
+                    gap: 15px;
+                    .btn {
+                        padding: func.convert(14) func.convert(38);
+                        border-radius: func.convert(50);
+                    }
+                    .login__btn {
+                        color: var.$vd-blue;
+                        font-size: 1.2rem;
+                    }
+                    .signup__btn {
+                        background: rgb(255, 61, 84);
+                        font-size: 1.2rem;
+                        background: linear-gradient(90deg, rgba(255, 61, 84, 1) 0%, rgba(255, 143, 112, 1) 100%);
+                        color: var.$white;
+                    }
+                }
+            }
+            .hamburguer {
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    padding: func.convert(10);
+                }
+            }
+        }
+    }
+}

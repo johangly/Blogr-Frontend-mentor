@@ -1,0 +1,21 @@
+@use "functions" as func;
+@use "variables" as var;
+%align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%button {
+    color: var.$white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: func.convert(12) func.resizer(16, 12.5vw, 18);
+    border-radius: func.convert(50);
+}
+
+%first-letter {
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,62 @@
+@use "../base/functions" as func;
+@use "../base/extensions";
+@use "../base/variables" as var;
+body .footer * {
+    font-family: var.$ubuntu;
+}
+
+.footer {
+    display: flex;
+    padding: func.convert(50) func.convert(20);
+    justify-content: space-evenly;
+    border-top-right-radius: 6.25rem;
+    background-color: var.$vdb-blue;
+    .footer__logo {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    ul {
+        // padding: func.convert(25);
+        width: 100%;
+        .list__title {
+            margin-bottom: func.convert(20);
+            font-size: 1rem;
+            color: var.$white;
+            font-weight: 600;
+            @extend %first-letter;
+        }
+        li {
+            list-style: none;
+            @extend %first-letter;
+            padding: func.convert(10) 0;
+            a {
+                color: var.$white;
+                font-size: 1rem;
+                filter: opacity(.8);
+            }
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: var.$white;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .footer {
+        flex-direction: column;
+        gap: func.convert(30);
+        ul {
+            .list__title {
+                margin-bottom: func.convert(15);
+            }
+            display: flex;
+            flex-direction: column;
+            li {
+                margin: 0 auto;
+            }
+        }
+    }
+}
