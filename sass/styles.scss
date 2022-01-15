@@ -8,29 +8,3 @@
 @use "layout/header";
 @use "layout/main";
 @use "layout/footer";
-// Oye, muy buen trabajo en este. Creo que el diseño para el escritorio se ve bien, el sitio también responde al escalar el navegador. Para el estado móvil, hay puntos de interrupción en los que ya muestra el diseño de una columna para la vista móvil, pero todavía hay una sección en la que el contenido todavía usa la versión de escritorio. Por ejemplo, a 700 px, para la sección de funciones, los controles de pestañas están en un diseño de una sola columna, pero el contenido debajo todavía usa la versión de escritorio. Sería bueno mostrar la versión móvil de cada contenido. Además, en los 700 px, el inicio de sesión de la barra de navegación se ajusta a otra fila.
-// Aquí hay algunas otras sugerencias para el sitio:
-// Tal vez agregar un ancho máximo en la etiqueta del cuerpo o en un envoltorio para el contenido. Si intenta alejar su pantalla, verá que el contenido del sitio simplemente se está extendiendo. Agregar el ancho máximo evitará este.
-// No agregue contorno: ninguno en el selector * si no va a proporcionar un indicador visual personalizado. El esquema proporciona una guía al usuario cuando atraviesa elementos enfocables en el sitio. Intente usar la tecla de tabulación para navegar por el sitio, es difícil saber dónde se encuentra. Use el selector :focus-visible para agregar el esquema personalizado o simplemente elimine su declaración.
-// Para este, el cuerpo no necesita usar un flexbox ya que el contenido del sitio solo se encuentra en una sola columna. Además, los elementos html que están anidando el contenido del sitio en este momento son simplemente hijos directos del cuerpo, lo que no debería ser así, ya que deberían estar anidados dentro de su propio elemento de referencia.
-// En este diseño, sería genial si su barra de navegación estuviera dentro del encabezado, el contenido principal dentro de la etiqueta principal y la parte inferior dentro de la etiqueta del pie de página. Su etiqueta de cuerpo solo debe contener estos 3 elementos emblemáticos:
-// <encabezado />
-// <principal />
-// <pie de página />
-// Actualmente, está utilizando 2 nav para crear la versión móvil y de escritorio de la barra de navegación, lo que no debería ser el caso. Solo debe usar una sola navegación y solo usar css para que se adapte al estado móvil y de escritorio. De esta manera, su marcado no utilizará elementos repetitivos.
-// Además, incluso sugerí usar una sola navegación, en este momento, la navegación de estado móvil no se oculta correctamente. Cuando estás ocultando algo, no solo usas el ancho o la opacidad, ya que solo ocultan el contenido visualmente, pero aún están en el dominio. Siempre debe usar la visibilidad o la visualización para mostrar/ocultar el elemento.
-// Para este, el elemento de navegación superior podría usar un atributo aria-label="primary" en él. La razón de esto es que más tarde sugeriría navegación en la etiqueta de pie de página. Debe agregar la etiqueta aria para un elemento de navegación si está utilizando la navegación más de una vez en la página. Esto lo hará único.
-// El logotipo del sitio web podría eliminarse de la navegación, ya que no se trata como un enlace del sitio.
-// Cuando utilice la opción alt para el logotipo del sitio, asegúrese siempre de utilizar el nombre del sitio web y no solo el logotipo, ya que si un usuario recorre las imágenes del sitio, lo que realmente proporcionará el texto del logotipo. Además, evite aquellas palabras que se relacionen con el gráfico cuando use valor para el atributo alt.
-// Esos enlaces de navegación podrían incluirse dentro de una etiqueta ul desde esa "lista" de enlaces.
-// Cuando está escribiendo un texto en mayúsculas, no lo escribe directamente en mayúsculas en el marcado porque en lugar de que el lector de pantalla lea la palabra tal como está, leerá la palabra letra por letra. Escríbalos en minúsculas y use text-transform: uppercase en css.
-// iniciar sesión es mejor usando una etiqueta en lugar de un botón en este.
-// No anide una etiqueta dentro del botón y viceversa, ya que solo crean 2 recorridos adicionales. Usa solo uno.
-// No use el encabezado dentro de la principal tal como está, ya que se tratará como un elemento regular. Sería mejor si fuera reemplazado por div.
-// No necesita usar la etiqueta br para hacer que la palabra se envuelva en otra fila como lo que usó en la etiqueta h1. Use max-width para el h1 para que haga que la palabra se ajuste si es necesario.
-// Las imágenes decorativas en el sitio, como la imagen del héroe, podrían usar un atributo adicional aria-hidden="true" para que quede totalmente oculta para los usuarios de lectores de pantalla.
-// Si va a utilizar un artículo para las funciones, utilice un solo artículo para envolver tanto los controles de pestañas como el contenido a continuación, ya que están relacionados entre sí.
-// Para la sección de funciones también, sus controles funcionan bien, pero usar el botón solo sin agregar atributos adicionales no es informativo en absoluto. Para este, puede implementarlo como una interfaz con pestañas. Puede echar un vistazo a mi implementación en mi solución para esto. De esta forma, será más accesible para los usuarios.
-// más información debe usar una etiqueta, ya que es más probable que sea un enlace.
-// Además, acabo de notar que casi los párrafos en el sitio usan la etiqueta br para envolver cada texto. Nuevamente, max-width será mucho mejor.
-// Casi todo el contenido de su solución usa la etiqueta de sección, pero se usa incorrectamente. La etiqueta de sección como punto de referencia no es realmente informativa, ya que no brinda información adicional sobre la etiqueta a menos que esté utilizando el atributo aria-labeledby en ella. Esta wa
